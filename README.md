@@ -16,5 +16,5 @@ texutil.js
 makeslide.scpt
 ----
 
-Macでスライドをまとめて画像化するAppleScript.
+Macでスライドをまとめて画像化するAppleScript.  
 印刷などする場合に便利.
