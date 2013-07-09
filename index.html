@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<!--
+	Google HTML5 slide template
+
+	Authors: Luke Mahé (code)
+		Marcin Wichary (code and design)
+		
+		Dominic Mazzoni (browser compatibility)
+		Charles Chen (ChromeVox support)
+
+	URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+	<head>
+		<title>Iterative Optimization in the Polyhedral Model: Part I, One-Dimensional Time</title>
+
+		<meta charset="utf-8">
+		<script src="http://html5slides.googlecode.com/svn/trunk/slides.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="texutil.js"></script>
+	</head>
+	
+	<style>
+		/* Your individual styles here, or just use inline styles if that's what you want. */
+
+		.slides.template-default>article:not(.nobackground):not(.biglogo):not(.dummy) {
+			background-image: none;
+		}
+
+		ul:not(.dummy) {
+			margin: 0.5em 0 0.5em 1em;
+		}
+		ul:not(.dummy) ul {
+			margin: 0 0 0 1em;
+		}
+
+		li:not(.dummy) {
+			list-style-type: disc;
+			margin-bottom: 0.5em;
+		}
+		li:not(.dummy):before {
+			content: '';
+		}
+		li:not(.dummy) li {
+			list-style-type: circle;
+			margin-bottom: 0;
+		}
+		li:not(.dummy) li li {
+			list-style-type: square;
+		}
+
+		img:not(.dummy) {
+			vertical-align: middle;
+		}
+
+		em {
+			color: #339900;
+		}
+		strong {
+			color: #ff3300;
+		}
+	</style>
+
+	<body style="display: none">
+		<section class="slides layout-regular template-default">
+			<!-- Your slides (<article>s) go here. Delete or comment out the slides below. -->
+
+			<article>
+				<h1>
+					Presentation Title
+				</h1>
+				<p>
+					Author Name
+					<br>
+					2013/XX/XX
+				</p>
+			</article>
+
+			<article>
+				<h3>
+					Slide#1 Title
+				</h3>
+				<ul>
+					<li>
+						基本的にはリストで書く.
+						<ul>
+							<li>
+								リスト入れ子1.
+							</li>
+							<li>
+								リスト入れ子2.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>
+					Slide#2 Title
+				</h3>
+				<ul>
+					<li>
+						<strong>数式</strong>を挿入するサンプル.
+						<ul>
+							<li id="formula-1"></li>
+							<li id="formula-2"></li>
+						</ul>
+					</li>
+					<li>
+						文章の途中にインラインで
+						<span id="formula-3"></span>
+						挿入することもできる.
+					</li>
+				</ul>
+				<script>
+					TexUtil.insert("#formula-1", TexUtil.heredoc(function () {/*
+f(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\Omega)e^{j \Omega t}d\Omega
+*/}), 48);
+					TexUtil.insert("#formula-2", TexUtil.heredoc(function () {/*
+F(\Omega)=\int_{-\infty}^{\infty}f(t)e^{-j \Omega t}dt
+*/}), 48);
+					TexUtil.insert("#formula-3", TexUtil.heredoc(function () {/*
+e^{i\theta}=\cos\theta+i\sin\theta
+*/}), 30);
+				</script>
+			</article>
+
+			<article>
+				<h3>
+					Slide#3 Title
+				</h3>
+				<ul>
+					<li>
+						HTMLなので簡単に<strong>画像</strong>も入れられる.
+						<ul>
+							<li>
+								<img src="http://www.crypton.co.jp/img/special/vocaloid/img_MIKU.png" width="240">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>
+					Slide#4 Title
+				</h3>
+				<p style="margin-bottom: -30px">Figure 1: <em>matvect</em> kernel</p>
+				<pre style="margin-bottom: 10px">
+for (i = 0; i &lt;= n; i++) {
+    s[i] = 0;
+    for (j = 0; j &lt;= n; j++)
+        s[i] = s[i] + a[i][j] * x[j];
+}
+</pre>
+				<ul>
+					<li>
+						コードのSyntax Highlight機能もある.
+					</li>
+				</ul>
+			</article>
+
+		</section>
+	</body>
+</html>
