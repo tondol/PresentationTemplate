@@ -116,15 +116,15 @@
 					</li>
 				</ul>
 				<script>
-					TexUtil.insert("#formula-1", TexUtil.heredoc(function () {/*
+					$("#formula-1").append(TexUtil.create(TexUtil.heredoc(function () {/*
 f(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\Omega)e^{j \Omega t}d\Omega
-*/}), 48);
-					TexUtil.insert("#formula-2", TexUtil.heredoc(function () {/*
+*/}), 48));
+					$("#formula-2").append(TexUtil.create(TexUtil.heredoc(function () {/*
 F(\Omega)=\int_{-\infty}^{\infty}f(t)e^{-j \Omega t}dt
-*/}), 48);
-					TexUtil.insert("#formula-3", TexUtil.heredoc(function () {/*
+*/}), 48));
+					$("#formula-3").append(TexUtil.create(TexUtil.heredoc(function () {/*
 e^{i\theta}=\cos\theta+i\sin\theta
-*/}), 30);
+*/}), 30));
 				</script>
 			</article>
 
