@@ -6,7 +6,8 @@ A Presentation template using html5slides
 index.html
 ----
 
-スライド本体.
+スライド本体.  
+元々のhtml5slidesから少しカスタマイズを加えてあります.
 
 texutil.js
 ----
